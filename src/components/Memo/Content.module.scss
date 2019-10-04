@@ -1,0 +1,17 @@
+.editable[contentEditable="true"] {
+  border-radius: 2px;
+  border: 1px solid lightgray;
+  height: 500px;
+}
+
+.date {
+  text-align: right;
+  
+}
+
+.editable {
+  margin: 0;
+  padding: 4px 10px;
+  overflow-y: scroll;
+  margin-bottom: 10px;
+}

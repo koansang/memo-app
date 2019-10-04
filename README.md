@@ -1,3 +1,5 @@
+![Alt text](./capture/capture.png)
+
 ## 환경 구성
 이 프로젝트는 `create-react-app`으로 만들어졌습니다.
 

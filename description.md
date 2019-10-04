@@ -30,7 +30,7 @@ Redux에서 비동기 액션을 처리하기 위한 미들웨어 라이브러리
 ### [reselect](https://github.com/reduxjs/reselect)
 Redux에서 memoziation을 위한 라이브러리 입니다.
 
-### 필요한 개선사항
+## 필요한 개선사항
 - Redux 액션을 정리할 필요가 있습니다.
 - 컴포넌트 분리가 필요합니다.
 - Test코드를 작성하면 좋을것 같습니다.

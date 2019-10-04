@@ -10,7 +10,7 @@ import Config from './Config';
 const { Text } = Typography;
 
 function MemoList(props) {
-  const { memos, labelId } = props;
+  const { memos, labelId, memoPathId } = props;
   const [selectMemos, changeSelectMemos] = useState([]);
   const handleMemos = useCallback(
     id => {
@@ -30,7 +30,7 @@ function MemoList(props) {
     <List theme="light">
       {memos.length === 0 && <Text level={4}>등록 된 메모가 없습니다.</Text>}
       {memos.map(memo => (
-        <List.Item key={memo['_id']}>
+        <List.Item key={memo['_id']} style={{ backgroundColor: memoPathId ? '#e6f7ff' : null }}>
           <Checkbox checked={selectMemos.includes(memo['_id'])} onChange={() => handleMemos(memo['_id'])} />
           <Link
             to={`/labels/${labelId}/memos/${memo['_id']}`}
@@ -50,12 +50,14 @@ function MemoList(props) {
 }
 
 MemoList.propTypes = {
-  labelId: PropTypes.string,
   memos: PropTypes.arrayOf(memoType).isRequired,
+  labelId: PropTypes.string,
+  memoPathId: PropTypes.string,
 };
 
 MemoList.defaultProps = {
   labelId: '',
+  memoPathId: null,
 };
 
 export default MemoList;

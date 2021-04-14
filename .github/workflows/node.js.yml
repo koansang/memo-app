@@ -26,6 +26,9 @@ jobs:
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d %H:%M:%s')"
       
+      - name: Print Current date
+        run: echo "${{ steps.date.output.date }}"
+      
       - name: 'Print Github github'
         env:
           GITHUB_CONTEXT: ${{ toJSON(github.event.head_commit) }}
